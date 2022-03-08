@@ -1,0 +1,26 @@
+@import 'assets/functions/sizing';
+@import 'assets/variables/colors';
+
+:host {
+  display: contents
+}
+
+.button {
+  align-items: center;
+  display: flex;
+  fill: $grey-200;
+  cursor: pointer;
+  padding: size(1);
+  border-radius: 50%;
+  transition: background-color .2s ease-in-out;
+
+  &:hover:not([disabled]) {
+    background-color: $grey-100;
+  }
+
+  &[disabled] {
+    fill: $grey-100;
+    pointer-events: none;
+    cursor: none;
+  }
+}

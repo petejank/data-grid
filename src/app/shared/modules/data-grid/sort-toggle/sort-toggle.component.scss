@@ -1,0 +1,10 @@
+@import 'assets/functions/sizing';
+
+:host {
+  display: contents
+}
+
+.sort-toggle {
+  position: absolute;
+  right: size(-3);
+}

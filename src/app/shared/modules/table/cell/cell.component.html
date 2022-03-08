@@ -1,0 +1,17 @@
+<td *ngIf="!header" [class]="classes">
+  <ng-container *ngTemplateOutlet="tempOutlet"></ng-container>
+</td>
+<th *ngIf="header" [class]="classes">
+  <ng-container *ngTemplateOutlet="tempOutlet"></ng-container>
+</th>
+<ng-template #tempOutlet>
+  <div
+    class="table-cell__inner"
+    data-testid="table-cell"
+    [attr.role]="onClick && 'button'"
+    [attr.tabindex]="onClick && 0"
+    (click)="onClick && onClick()"
+  >
+    <ng-content></ng-content>
+  </div>
+</ng-template>

@@ -1,0 +1,25 @@
+@import 'assets/functions/sizing';
+@import 'assets/variables/colors';
+
+:host {
+  display: contents;
+}
+
+.image {
+  $size: size(2);
+
+  fill: $grey-200;
+  height: $size;
+  width: $size;
+
+  &--fill-inherit {
+    fill: inherit;
+  }
+
+  &--large {
+    $size: size(3);
+
+    height: $size;
+    width: $size;
+  }
+}

@@ -1,0 +1,27 @@
+@import 'assets/functions/sizing';
+@import 'assets/variables/colors';
+
+:host {
+  display: contents
+}
+
+.table-cell {
+  border-top: 1px solid $grey-100;
+  text-align: left;
+  padding: size(2);
+
+  &--header {
+    border: 0;
+    white-space: nowrap;
+  }
+
+  &__inner {
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+
+    &[role="button"] {
+      cursor: pointer
+    }
+  }
+}

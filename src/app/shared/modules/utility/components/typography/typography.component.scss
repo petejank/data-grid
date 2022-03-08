@@ -1,0 +1,18 @@
+@import 'assets/variables/font';
+@import 'assets/variables/colors';
+
+:host {
+  display: contents
+}
+
+.typography {
+  line-height: 1.5;
+  font-family: $font-family;
+  font-size: $base-font-size;
+  font-weight: $font-weight-regular;
+  color: $grey-200;
+
+  &--bold {
+    font-weight: $font-weigt-bold;
+  }
+}

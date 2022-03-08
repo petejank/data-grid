@@ -1,0 +1,7 @@
+@import '../variables/sizing';
+
+@mixin screen-medium-up {
+  @media (min-width: $min-width-m) {
+    @content;
+  }
+}

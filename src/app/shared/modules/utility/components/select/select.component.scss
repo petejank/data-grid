@@ -1,0 +1,13 @@
+@import 'assets/variables/colors';
+@import 'assets/variables/font';
+
+:host {
+  display: contents
+}
+
+.select {
+  color: $grey-200;
+  font-size: $base-font-size;
+  font-family: $font-family;
+  padding-right: 4px;
+}

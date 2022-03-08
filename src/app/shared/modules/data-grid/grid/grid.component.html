@@ -1,0 +1,32 @@
+<app-table-container>
+  <app-table>
+    <app-table-head>
+      <app-table-row>
+        <app-table-cell
+          data-testid="grid-column-header"
+          *ngFor="let columnData of columnsData"
+          [header]="true"
+          [onClick]="getColumnSortFn(columnData)"
+        >
+          <app-typography weight="bold">{{ columnData.name }}</app-typography>
+          <app-sort-toggle *ngIf="isSortColumn(columnData)" [direction]="columnData.direction"></app-sort-toggle>
+        </app-table-cell>
+      </app-table-row>
+    </app-table-head>
+    <app-table-body>
+      <app-table-row *ngFor="let dataEntry of currentData">
+        <app-table-cell *ngFor="let columnData of columnsData">
+          <app-typography>{{ dataEntry[columnData.property] }}</app-typography>
+        </app-table-cell>
+      </app-table-row>
+    </app-table-body>
+  </app-table>
+</app-table-container>
+<app-pagination
+  [currentPage]="pageNumber"
+  [pageSize]="pageSize"
+  [count]="count"
+  (leftClick)="onReducePage()"
+  (rightClick)="onIncrementPage()"
+  (pageSizeChange)="onPageSizeChange($event)"
+></app-pagination>

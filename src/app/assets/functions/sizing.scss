@@ -1,0 +1,5 @@
+@import '../variables/sizing';
+
+@function size($n) {
+  @return $base-size * $n;
+}

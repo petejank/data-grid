@@ -1,0 +1,19 @@
+<div class="pagination">
+  <div class="pagination__overflow-position">
+    <app-typography>Items per page: </app-typography>
+  </div>
+  <div class="pagination__page-size">
+    <app-select [options]="options" [selected]="selectedOption" (selectionChange)="onOptionChange($event)"></app-select>
+  </div>
+  <app-typography data-testid="pagination-range">{{ leftBracket }} - {{ rightBracket }} of {{ count }}</app-typography>
+  <div class="pagination__button">
+    <app-button data-testid="pagination-left" (click)="onLeftClick()" [disabled]="isLeftButtonDisabled()">
+      <app-image type="chevronLeft" [large]="true" [fillInherit]="true"></app-image>
+    </app-button>
+  </div>
+  <div class="pagination__button">
+    <app-button data-testid="pagination-right" (click)="onRightClick()" [disabled]="isRightButtonDisabled()">
+      <app-image type="chevronRight" [large]="true" [fillInherit]="true"></app-image>
+    </app-button>
+  </div>
+</div>

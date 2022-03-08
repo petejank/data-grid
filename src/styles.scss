@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import '~reset-css/reset.css';
+@import 'assets/variables/colors';
+
+body {
+  background: $grey;
+}
+
+// Missing reset.css entries
+button {
+  margin: 0;
+  background: none;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+select {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}

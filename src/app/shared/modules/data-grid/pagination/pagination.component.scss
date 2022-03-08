@@ -1,0 +1,27 @@
+@import 'assets/functions/sizing';
+@import 'assets/variables/colors';
+
+:host {
+  display: contents
+}
+
+.pagination {
+  align-items: center;
+  display: flex;
+  border-top: 1px solid $grey-100;
+  padding: size(2);
+  overflow-x: auto;
+  white-space: nowrap;
+
+  &__overflow-position {
+    margin-left: auto;
+  }
+
+  &__page-size {
+    margin: 0 size(4) 0 size(2);
+  }
+
+  &__button {
+    margin-left: size(2)
+  }
+}

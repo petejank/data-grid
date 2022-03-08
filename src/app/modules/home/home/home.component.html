@@ -1,0 +1,20 @@
+<section>
+  <app-paper>
+    <app-grid
+      *ngIf="paginator.data && paginator.count"
+      [pageSize]="paginator.currentPaginationParams.pageSize"
+      [pageNumber]="paginator.currentPaginationParams.currentPage"
+      [data]="paginator.data"
+      [count]="paginator.count"
+      [sortable]="true"
+      (paginationChange)="onPaginationChange($event)"
+      (sortChange)="paginator.fetchSorted($event)"
+    >
+      <app-grid-column name="Id" property="id" [sortable]="true"></app-grid-column>
+      <app-grid-column name="First name" property="firstName" [sortable]="true"></app-grid-column>
+      <app-grid-column name="Last name" property="lastName" [sortable]="true"></app-grid-column>
+      <app-grid-column name="E-mail" property="email" [sortable]="true"></app-grid-column>
+      <app-grid-column name="Industry" property="industry" [sortable]="false"></app-grid-column>
+    </app-grid>
+  </app-paper>
+</section>
